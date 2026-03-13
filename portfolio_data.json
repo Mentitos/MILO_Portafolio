@@ -1,0 +1,75 @@
+{
+  "artist": {
+    "name": "Milo Vera",
+    "tagline": "arte digital · figura humana · comisiones",
+    "bio": "Soy un artista que se dedica al dibujo digital :3. Me enfoco en dibujos centrados en la figura humana. ¡Escribime para pedir una comisión!",
+    "avatar": "assets/images/avatar.png",
+    "cosas_que_dibujo": [
+      "yaoi",
+      "figura humana",
+      "retratos",
+      "ilustración digital"
+    ],
+    "cosas_que_no_dibujo": [
+      "mecha"
+    ],
+    "me_gusta": "Me gusta nyan cat :3"
+  },
+  "redes": {
+    "instagram": "https://instagram.com/milovera",
+    "twitter_x": "https://x.com/milovera",
+    "email": "milo@email.com",
+    "patreon": "https://patreon.com/milovera"
+  },
+  "comisiones": {
+    "abiertas": true,
+    "tiempo_espera": "2 meses",
+    "acepta_ia": false,
+    "lgbtq_friendly": true,
+    "nota": "Comisiones personalizadas. Consulta cualquier cosa!",
+    "tipos": [
+      {
+        "id": "retrato",
+        "nombre": "Retrato",
+        "descripcion": "Busto o medio cuerpo con fondo simple o sin fondo",
+        "precio_desde": 25,
+        "moneda": "USD",
+        "imagen_ejemplo": "assets/obras/OIP-2409106471.jpg"
+      },
+      {
+        "id": "cuerpo_completo",
+        "nombre": "Cuerpo Completo",
+        "descripcion": "Personaje completo con pose dinámica y fondo básico",
+        "precio_desde": 50,
+        "moneda": "USD",
+        "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
+      }
+    ]
+  },
+  "galeria": [
+    {
+      "id": "1",
+      "titulo": "Kagura PNG",
+      "descripcion": "Ilustración de Kagura de Gintama con su clásico paraguas. ¡Espero que les guste!",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/245-2453696_gintama-png-4253462901.png",
+      "tipo": "cuerpo_completo",
+      "destacada": true
+    },
+    {
+      "id": "2",
+      "titulo": "Gintoki Jpg",
+      "descripcion": "Dibujo rápido y casual de Gintoki.",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/OIP-2409106471.jpg",
+      "tipo": "retrato",
+      "destacada": false
+    }
+  ]
+}
