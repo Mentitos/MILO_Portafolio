@@ -43,6 +43,14 @@
         "precio_desde": 50.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
+      },
+      {
+        "id": "tipo_1773544282998",
+        "nombre": "Con Fondo",
+        "descripcion": "Ahora tiene fondo",
+        "precio_desde": 70.0,
+        "moneda": "USD",
+        "imagen_ejemplo": "assets/comisiones/tipo_1773544282998_1773544305806.jpg"
       }
     ]
   },
