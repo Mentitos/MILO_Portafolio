@@ -64,7 +64,7 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773543913434_1773543986115.jpg",
-      "tipo": "cuerpo_completo",
+      "tipo": "Cuerpo Completo",
       "destacada": false
     },
     {
@@ -76,7 +76,7 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773542735858_1773542769998.jpg",
-      "tipo": "cuerpo_completo",
+      "tipo": "Con Fondo",
       "destacada": false
     },
     {
@@ -88,7 +88,7 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/245-2453696_gintama-png-4253462901.png",
-      "tipo": "cuerpo_completo",
+      "tipo": "Cuerpo Completo",
       "destacada": false
     },
     {
@@ -96,7 +96,7 @@
       "titulo": "Gintoki Jpg",
       "descripcion": "Dibujo rápido y casual de Gintoki.",
       "enlaces": {
-        "instagram": "#",
+        "instagram": "instagram.com",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/OIP-2409106471.jpg",
