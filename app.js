@@ -349,16 +349,34 @@ function renderContacto(redes, artist) {
   socialDefs.forEach(({ key, label, icon, color }, i) => {
     const a = document.createElement('a');
     a.className = 'social-card reveal';
-    a.href = '#';
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Esta red social aún no está confirmada');
-    });
+    
+    if (redes && redes[key] && redes[key] !== '#') {
+      a.href = key === 'email' && !redes[key].startsWith('mailto:') 
+        ? `mailto:${redes[key]}` 
+        : redes[key];
+      if (key !== 'email') {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+    } else {
+      a.href = '#';
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Esta red social aún no está confirmada');
+      });
+    }
+
     a.style.setProperty('--social-color', color);
     a.style.transitionDelay = `${i * 0.08}s`;
+    
+    let displayLabel = label;
+    if (key === 'email' && redes && redes[key] && redes[key] !== '#') {
+      displayLabel = redes[key];
+    }
+
     a.innerHTML = `
       <div class="social-icon">${icon}</div>
-      <span>${label}</span>
+      <span>${displayLabel}</span>
     `;
     grid.appendChild(a);
   });
