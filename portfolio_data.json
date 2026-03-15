@@ -48,16 +48,28 @@
   },
   "galeria": [
     {
+      "id": "1773542735858",
+      "titulo": "Sadaharu y Gintoki",
+      "descripcion": "mas lindos juntos",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1773542735858_1773542769998.jpg",
+      "tipo": "cuerpo_completo",
+      "destacada": false
+    },
+    {
       "id": "1",
-      "titulo": "Kagura PNG",
-      "descripcion": "Ilustración de Kagura de Gintama con su clásico paraguas. ¡Espero que les guste!",
+      "titulo": "Kagura png",
+      "descripcion": "Kagura cuerpo completo ponele",
       "enlaces": {
         "instagram": "#",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/245-2453696_gintama-png-4253462901.png",
       "tipo": "cuerpo_completo",
-      "destacada": true
+      "destacada": false
     },
     {
       "id": "2",
