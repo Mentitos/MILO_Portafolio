@@ -48,6 +48,18 @@
   },
   "galeria": [
     {
+      "id": "1773543913434",
+      "titulo": "Capsaicin Cookie",
+      "descripcion": "picante owo",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1773543913434_1773543986115.jpg",
+      "tipo": "cuerpo_completo",
+      "destacada": false
+    },
+    {
       "id": "1773542735858",
       "titulo": "Sadaharu y Gintoki",
       "descripcion": "mas lindos juntos",
