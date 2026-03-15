@@ -56,6 +56,30 @@
   },
   "galeria": [
     {
+      "id": "1773544703645",
+      "titulo": "When haces tus publicaciones",
+      "descripcion": "But se te olvida ponerle descripcion",
+      "enlaces": {
+        "instagram": "https://www.instagram.com/p/DOzev15DQhL/",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1773544703645_1773544708810.jpeg",
+      "tipo": "Cuerpo Completo",
+      "destacada": false
+    },
+    {
+      "id": "1773544651225",
+      "titulo": "Desconozco Moma ayuda",
+      "descripcion": "Moma ponele descirpcion",
+      "enlaces": {
+        "instagram": "https://www.instagram.com/p/DV1-SlzDb6e/",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1773544651225_1773544664464.jpeg",
+      "tipo": "Retrato",
+      "destacada": false
+    },
+    {
       "id": "1773543913434",
       "titulo": "Capsaicin Cookie",
       "descripcion": "picante owo",
@@ -96,7 +120,7 @@
       "titulo": "Gintoki Jpg",
       "descripcion": "Dibujo rápido y casual de Gintoki.",
       "enlaces": {
-        "instagram": "instagram.com",
+        "instagram": "https://www.instagram.com/",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/OIP-2409106471.jpg",
