@@ -13,7 +13,7 @@
     "cosas_que_no_dibujo": [
       "mecha"
     ],
-    "me_gusta": "Me gusta nyan cat :3"
+    "me_gusta": "Me gusta nyan cat y el yaoi :3"
   },
   "redes": {
     "instagram": "https://instagram.com/milovera",
@@ -32,7 +32,7 @@
         "id": "retrato",
         "nombre": "Retrato",
         "descripcion": "Busto o medio cuerpo con fondo simple o sin fondo",
-        "precio_desde": 25,
+        "precio_desde": 25.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/OIP-2409106471.jpg"
       },
@@ -40,7 +40,7 @@
         "id": "cuerpo_completo",
         "nombre": "Cuerpo Completo",
         "descripcion": "Personaje completo con pose dinámica y fondo básico",
-        "precio_desde": 50,
+        "precio_desde": 50.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
       }
