@@ -19,11 +19,13 @@
   <nav id="navbar">
     <a href="#hero" class="nav-logo">Milo Vera</a>
     <div class="nav-links">
-      <a href="#galeria">galería</a>
-      <a href="#sobre-mi">sobre mí</a>
-      <a href="#comisiones">comisiones</a>
-      <a href="#contacto">contacto</a>
+      <a href="#galeria" data-i18n="nav_galeria">galería</a>
+      <a href="#comisiones" data-i18n="nav_comisiones">comisiones</a>
+      <a href="#contacto" data-i18n="nav_contacto">contacto</a>
     </div>
+    <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma">
+      ES
+    </button>
     <button id="theme-toggle" aria-label="Cambiar tema">
       <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
         fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -48,10 +50,9 @@
   </nav>
 
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#galeria" class="mobile-link">galería</a>
-    <a href="#sobre-mi" class="mobile-link">sobre mí</a>
-    <a href="#comisiones" class="mobile-link">comisiones</a>
-    <a href="#contacto" class="mobile-link">contacto</a>
+    <a href="#galeria" class="mobile-link" data-i18n="nav_galeria">galería</a>
+    <a href="#comisiones" class="mobile-link" data-i18n="nav_comisiones">comisiones</a>
+    <a href="#contacto" class="mobile-link" data-i18n="nav_contacto">contacto</a>
   </div>
 
   <main id="main-content">
@@ -66,7 +67,7 @@
             <h2 class="section-title" id="acordeon-artist-name"
               style="margin-bottom:0; font-size: clamp(20px, 3vw, 24px);">Milo Vera</h2>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span style="font-size: 14px; color: var(--on-muted); font-weight: 500;">Ver presentación</span>
+              <span style="font-size: 14px; color: var(--on-muted); font-weight: 500;" data-i18n="ver_presentacion">Ver presentación</span>
               <span class="chevron">▼</span>
             </div>
           </div>
@@ -105,7 +106,7 @@
     <section id="galeria" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">galería</h2>
+          <h2 class="section-title" data-i18n="galeria_titulo">galería</h2>
           <div class="section-line"></div>
         </div>
         <div class="filter-bar" id="filter-bar">
@@ -117,34 +118,11 @@
       </div>
     </section>
 
-    <section id="sobre-mi" class="section sobre-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">sobre mí</h2>
-          <div class="section-line"></div>
-        </div>
-        <div class="sobre-grid">
-          <div class="info-card reveal">
-            <p class="card-label">lo que me gusta</p>
-            <p id="artist-likes-desc" style="font-size: 15px; color: var(--on-muted); line-height: 1.6;"></p>
-          </div>
-          <div class="info-card reveal">
-            <p class="card-label">lo que dibujo</p>
-            <div class="chips-wrap" id="chips-si"></div>
-          </div>
-          <div class="info-card reveal">
-            <p class="card-label">lo que NO dibujo</p>
-            <div class="chips-wrap" id="chips-no"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="comisiones" class="section comisiones-section">
       <div class="container">
         <div class="section-header comisiones-header">
           <div>
-            <h2 class="section-title">comisiones</h2>
+            <h2 class="section-title" data-i18n="comisiones_titulo">comisiones</h2>
             <div class="section-line"></div>
           </div>
           <div class="commission-status-badge" id="comm-status-badge">
@@ -155,6 +133,17 @@
 
         <div class="comisiones-meta" id="comisiones-meta"></div>
 
+        <div class="sobre-grid" style="margin-bottom: 30px;">
+          <div class="info-card reveal">
+            <p class="card-label" data-i18n="lo_que_dibujo">lo que dibujo</p>
+            <div class="chips-wrap" id="chips-si"></div>
+          </div>
+          <div class="info-card reveal">
+            <p class="card-label" data-i18n="lo_que_no_dibujo">lo que NO dibujo</p>
+            <div class="chips-wrap" id="chips-no"></div>
+          </div>
+        </div>
+
         <div class="comisiones-nota" id="comisiones-nota"></div>
 
         <div class="comisiones-grid" id="comisiones-grid"></div>
@@ -164,10 +153,10 @@
     <section id="contacto" class="section contacto-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">contacto</h2>
+          <h2 class="section-title" data-i18n="contacto_titulo">contacto</h2>
           <div class="section-line"></div>
         </div>
-        <p class="contacto-sub">¿Querés una comisión o solo charlar de arte? ¡Escribime!</p>
+        <p class="contacto-sub" data-i18n="contacto_sub">¿Querés una comisión o solo charlar de arte? ¡Escribime!</p>
         <div class="social-grid" id="social-grid"></div>
         <footer class="site-footer" id="site-footer">
           © <span id="year"></span> MILO vera

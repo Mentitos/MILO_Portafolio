@@ -177,6 +177,28 @@ button {
   transform: scale(0.85);
 }
 
+.lang-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--on-muted);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  margin-left: 8px;
+}
+.lang-toggle-btn:hover {
+  background: var(--surface);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
 [data-theme="light"] .icon-moon {
   display: none;
 }

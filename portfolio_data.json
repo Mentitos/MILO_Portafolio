@@ -2,9 +2,17 @@
   "artist": {
     "name": "Milo Vera",
     "tagline": "arte digital · figura humana · comisiones",
+    "tagline_en": "arte digital · figura humana · comisiones",
     "bio": "Soy un artista que se dedica al dibujo digital :3. Me enfoco en dibujos centrados en la figura humana. ¡Escribime para pedir una comisión!",
+    "bio_en": "Soy un artista que se dedica al dibujo digital :3. Me enfoco en dibujos centrados en la figura humana. ¡Escribime para pedir una comisión!",
     "avatar": "assets/images/avatar.png",
     "cosas_que_dibujo": [
+      "yaoi",
+      "figura humana",
+      "retratos",
+      "ilustración digital"
+    ],
+    "cosas_que_dibujo_en": [
       "yaoi",
       "figura humana",
       "retratos",
@@ -13,7 +21,11 @@
     "cosas_que_no_dibujo": [
       "mecha"
     ],
-    "me_gusta": "Me gusta nyan cat y el yaoi :3"
+    "cosas_que_no_dibujo_en": [
+      "mecha"
+    ],
+    "me_gusta": "Me gusta nyan cat y el yaoi :3",
+    "me_gusta_en": "Me gusta nyan cat y el yaoi :3"
   },
   "redes": {
     "instagram": "https://instagram.com/milovera",
@@ -24,14 +36,18 @@
   "comisiones": {
     "abiertas": true,
     "tiempo_espera": "2 meses",
+    "tiempo_espera_en": "2 meses",
     "acepta_ia": false,
     "lgbtq_friendly": true,
     "nota": "Comisiones personalizadas. Consulta cualquier cosa!",
+    "nota_en": "Comisiones personalizadas. Consulta cualquier cosa!",
     "tipos": [
       {
         "id": "retrato",
         "nombre": "Retrato",
+        "nombre_en": "Retrato",
         "descripcion": "Busto o medio cuerpo con fondo simple o sin fondo",
+        "descripcion_en": "Busto o medio cuerpo con fondo simple o sin fondo",
         "precio_desde": 25.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/OIP-2409106471.jpg"
@@ -39,7 +55,9 @@
       {
         "id": "cuerpo_completo",
         "nombre": "Cuerpo Completo",
+        "nombre_en": "Cuerpo Completo",
         "descripcion": "Personaje completo con pose dinámica y fondo básico",
+        "descripcion_en": "Personaje completo con pose dinámica y fondo básico",
         "precio_desde": 50.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
@@ -47,7 +65,9 @@
       {
         "id": "tipo_1773544282998",
         "nombre": "Con Fondo",
+        "nombre_en": "Con Fondo",
         "descripcion": "Ahora tiene fondo",
+        "descripcion_en": "Ahora tiene fondo",
         "precio_desde": 70.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/comisiones/tipo_1773544282998_1773544305806.jpg"
@@ -59,73 +79,143 @@
       "id": "1773544703645",
       "titulo": "When haces tus publicaciones",
       "descripcion": "But se te olvida ponerle descripcion",
+      "titulo_en": "When haces tus publicaciones",
+      "descripcion_en": "But se te olvida ponerle descripcion",
       "enlaces": {
         "instagram": "https://www.instagram.com/p/DOzev15DQhL/",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773544703645_1773544708810.jpeg",
       "tipo": "Cuerpo Completo",
+      "tipo_en": "Cuerpo Completo",
       "destacada": false
     },
     {
       "id": "1773544651225",
       "titulo": "Desconozco Moma ayuda",
       "descripcion": "Moma ponele descirpcion",
+      "titulo_en": "Desconozco Moma ayuda",
+      "descripcion_en": "Moma ponele descirpcion",
       "enlaces": {
         "instagram": "https://www.instagram.com/p/DV1-SlzDb6e/",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773544651225_1773544664464.jpeg",
       "tipo": "Retrato",
+      "tipo_en": "Retrato",
       "destacada": true
     },
     {
       "id": "1773543913434",
       "titulo": "Capsaicin Cookie",
       "descripcion": "picante owo",
+      "titulo_en": "Capsaicin Cookie",
+      "descripcion_en": "picante owo",
       "enlaces": {
         "instagram": "#",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773543913434_1773543986115.jpg",
       "tipo": "Cuerpo Completo",
+      "tipo_en": "Cuerpo Completo",
       "destacada": false
     },
     {
       "id": "1773542735858",
       "titulo": "Sadaharu y Gintoki",
       "descripcion": "mas lindos juntos",
+      "titulo_en": "Sadaharu y Gintoki",
+      "descripcion_en": "mas lindos juntos",
       "enlaces": {
         "instagram": "#",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773542735858_1773542769998.jpg",
       "tipo": "Con Fondo",
+      "tipo_en": "Con Fondo",
       "destacada": false
     },
     {
       "id": "1",
       "titulo": "Kagura png",
       "descripcion": "Kagura cuerpo completo ponele",
+      "titulo_en": "Kagura png",
+      "descripcion_en": "Kagura cuerpo completo ponele",
       "enlaces": {
         "instagram": "#",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/245-2453696_gintama-png-4253462901.png",
       "tipo": "Cuerpo Completo",
+      "tipo_en": "Cuerpo Completo",
       "destacada": false
     },
     {
       "id": "2",
       "titulo": "Gintoki Jpg",
       "descripcion": "Dibujo rápido y casual de Gintoki.",
+      "titulo_en": "Gintoki Jpg",
+      "descripcion_en": "Dibujo rápido y casual de Gintoki.",
       "enlaces": {
         "instagram": "https://www.instagram.com/",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/OIP-2409106471.jpg",
       "tipo": "Retrato",
+      "tipo_en": "Retrato",
       "destacada": false
     }
-  ]
+  ],
+  "ui_text": {
+    "es": {
+      "nav_galeria": "galería",
+      "nav_sobre_mi": "sobre mí",
+      "nav_comisiones": "comisiones",
+      "nav_contacto": "contacto",
+      "ver_presentacion": "Ver presentación",
+      "comisiones_abiertas": "Comisiones abiertas ✓",
+      "comisiones_cerradas": "Comisiones cerradas",
+      "galeria_titulo": "galería",
+      "todas": "todas",
+      "galeria_vacia": "✨ Las obras aparecerán acá",
+      "sobre_mi_titulo": "sobre mí",
+      "lo_que_me_gusta": "lo que me gusta",
+      "lo_que_dibujo": "lo que dibujo",
+      "lo_que_no_dibujo": "lo que NO dibujo",
+      "comisiones_titulo": "comisiones",
+      "tiempo_espera": "tiempo de espera",
+      "ia": "inteligencia artificial",
+      "ia_aceptada": "✓ aceptada",
+      "ia_no_banco": "✕ no banco",
+      "ambiente": "ambiente",
+      "desde": "desde",
+      "contacto_titulo": "contacto",
+      "contacto_sub": "¿Querés una comisión o solo charlar de arte? ¡Escribime!"
+    },
+    "en": {
+      "nav_galeria": "galería",
+      "nav_sobre_mi": "sobre mí",
+      "nav_comisiones": "comisiones",
+      "nav_contacto": "contacto",
+      "ver_presentacion": "Ver presentación",
+      "comisiones_abiertas": "Comisiones abiertas ✓",
+      "comisiones_cerradas": "Comisiones cerradas",
+      "galeria_titulo": "galería",
+      "todas": "todas",
+      "galeria_vacia": "✨ Las obras aparecerán acá",
+      "sobre_mi_titulo": "sobre mí",
+      "lo_que_me_gusta": "lo que me gusta",
+      "lo_que_dibujo": "lo que dibujo",
+      "lo_que_no_dibujo": "lo que NO dibujo",
+      "comisiones_titulo": "comisiones",
+      "tiempo_espera": "tiempo de espera",
+      "ia": "inteligencia artificial",
+      "ia_aceptada": "✓ aceptada",
+      "ia_no_banco": "✕ no banco",
+      "ambiente": "ambiente",
+      "desde": "desde",
+      "contacto_titulo": "contacto",
+      "contacto_sub": "¿Querés una comisión o solo charlar de arte? ¡Escribime!"
+    }
+  }
 }

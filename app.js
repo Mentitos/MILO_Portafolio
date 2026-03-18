@@ -10,6 +10,40 @@ const themeBtn = document.getElementById('theme-toggle');
 const savedTheme = localStorage.getItem('mv-theme') || 'light';
 root.setAttribute('data-theme', savedTheme);
 
+let currentLang = localStorage.getItem('mv-lang') || 'es';
+let globalData = null;
+
+const langBtn = document.getElementById('lang-toggle');
+if (langBtn) {
+  langBtn.textContent = currentLang.toUpperCase();
+  document.documentElement.lang = currentLang;
+  langBtn.addEventListener('click', () => {
+    const nextLang = currentLang === 'es' ? 'en' : 'es';
+    currentLang = nextLang;
+    localStorage.setItem('mv-lang', nextLang);
+    langBtn.textContent = nextLang.toUpperCase();
+    document.documentElement.lang = nextLang;
+    if (globalData) {
+      applyTranslations(globalData);
+      renderHero(globalData);
+      renderGaleria(globalData.galeria || []);
+      renderComisiones(globalData.comisiones, globalData.artist);
+      renderContacto(globalData.redes, globalData.artist);
+    }
+  });
+}
+
+function applyTranslations(data) {
+  if (!data || !data.ui_text) return;
+  const dict = data.ui_text[currentLang] || data.ui_text['es'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
+}
+
 themeBtn.addEventListener('click', () => {
   const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
   root.setAttribute('data-theme', next);
@@ -83,10 +117,13 @@ function showLightboxItem(index) {
   currentLightboxIndex = index;
   const obra = currentLightboxItems[index];
 
+  const title = (currentLang === 'en' && obra.titulo_en) ? obra.titulo_en : obra.titulo;
+  const desc = (currentLang === 'en' && obra.descripcion_en) ? obra.descripcion_en : obra.descripcion;
+
   lightboxImg.src = obra.imagen;
-  lightboxImg.alt = obra.titulo || '';
-  lightboxTitle.textContent = obra.titulo || '';
-  lightboxDesc.textContent = obra.descripcion || '';
+  lightboxImg.alt = title || '';
+  lightboxTitle.textContent = title || '';
+  lightboxDesc.textContent = desc || '';
 
   lightboxSocial.innerHTML = '';
   if (obra.enlaces) {
@@ -149,15 +186,16 @@ function hexToColor(hex) {
 
 function renderHero(data) {
   const { artist, comisiones } = data;
+  const dict = data.ui_text[currentLang] || data.ui_text['es'];
 
-  document.title = `${artist.name} — Arte & Comisiones`;
+  document.title = `${artist.name} — ${dict.nav_galeria} & ${dict.nav_comisiones}`;
   document.getElementById('artist-name').textContent = artist.name;
 
   const acordeonNameEl = document.getElementById('acordeon-artist-name');
   if (acordeonNameEl) acordeonNameEl.textContent = artist.name;
 
-  document.getElementById('artist-tagline').textContent = artist.tagline;
-  document.getElementById('artist-bio').textContent = artist.bio;
+  document.getElementById('artist-tagline').textContent = (currentLang === 'en' && artist.tagline_en) ? artist.tagline_en : artist.tagline;
+  document.getElementById('artist-bio').textContent = (currentLang === 'en' && artist.bio_en) ? artist.bio_en : artist.bio;
 
   const avatarImg = document.getElementById('hero-avatar');
   if (artist.avatar) avatarImg.src = artist.avatar;
@@ -165,50 +203,29 @@ function renderHero(data) {
   const badge = document.getElementById('commission-badge');
   badge.className = 'commission-badge reveal ' + (comisiones.abiertas ? 'open' : 'closed');
   badge.querySelector('.badge-text').textContent = comisiones.abiertas
-    ? 'Comisiones abiertas ✓'
-    : 'Comisiones cerradas';
+    ? dict.comisiones_abiertas
+    : dict.comisiones_cerradas;
 }
 
-function renderSobreMi(artist) {
-  const descriptionEl = document.getElementById('artist-likes-desc');
-  if (descriptionEl) {
-    descriptionEl.textContent = artist.me_gusta || 'No hay descripción disponible.';
-  }
-  const chipsSi = document.getElementById('chips-si');
-  chipsSi.innerHTML = '';
-  (artist.cosas_que_dibujo || []).forEach(cosa => {
-    const span = document.createElement('span');
-    span.className = 'chip chip-si';
-    span.textContent = cosa;
-    chipsSi.appendChild(span);
-  });
-
-  const chipsNo = document.getElementById('chips-no');
-  chipsNo.innerHTML = '';
-  (artist.cosas_que_no_dibujo || []).forEach(cosa => {
-    const span = document.createElement('span');
-    span.className = 'chip chip-no';
-    span.textContent = cosa;
-    chipsNo.appendChild(span);
-  });
-}
 
 function renderGaleria(galeria) {
   const grid = document.getElementById('gallery-grid');
   const filterBar = document.getElementById('filter-bar');
+  const dict = globalData.ui_text[currentLang] || globalData.ui_text['es'];
 
-  const tipos = ['todas', ...new Set(galeria.map(o => o.tipo).filter(Boolean))];
+  const tipos = ['todas', ...new Set(galeria.map(o => (currentLang === 'en' && o.tipo_en) ? o.tipo_en : o.tipo).filter(Boolean))];
 
   filterBar.innerHTML = '';
   tipos.forEach(tipo => {
     const btn = document.createElement('button');
-    btn.className = 'filter-btn' + (tipo === 'todas' ? ' active' : '');
-    btn.dataset.filter = tipo;
-    btn.textContent = tipo;
+    const isTodas = tipo === 'todas';
+    btn.className = 'filter-btn' + (isTodas ? ' active' : '');
+    btn.dataset.filter = isTodas ? 'todas' : tipo;
+    btn.textContent = isTodas ? dict.todas : tipo;
     btn.addEventListener('click', () => {
       filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderObraItems(galeria, tipo, grid);
+      renderObraItems(galeria, isTodas ? 'todas' : tipo, grid);
     });
     filterBar.appendChild(btn);
   });
@@ -217,13 +234,17 @@ function renderGaleria(galeria) {
 }
 
 function renderObraItems(galeria, filtro, grid) {
-  const items = filtro === 'todas' ? galeria : galeria.filter(o => o.tipo === filtro);
+  const dict = globalData.ui_text[currentLang] || globalData.ui_text['es'];
+  const items = filtro === 'todas' ? galeria : galeria.filter(o => {
+    const t = (currentLang === 'en' && o.tipo_en) ? o.tipo_en : o.tipo;
+    return t === filtro;
+  });
   currentLightboxItems = items;
 
   grid.innerHTML = '';
 
   if (!items.length) {
-    grid.innerHTML = '<div class="gallery-empty">✨ Próximamente más obras</div>';
+    grid.innerHTML = `<div class="gallery-empty">${dict.galeria_vacia}</div>`;
     return;
   }
 
@@ -231,24 +252,27 @@ function renderObraItems(galeria, filtro, grid) {
     const div = document.createElement('div');
     div.className = 'gallery-item reveal';
     div.style.transitionDelay = `${i * 0.06}s`;
+    
+    const title = (currentLang === 'en' && obra.titulo_en) ? obra.titulo_en : obra.titulo;
 
     const imgOrPlaceholder = obra.imagen
-      ? `<img src="${obra.imagen}" alt="${obra.titulo}" 
+      ? `<img src="${obra.imagen}" alt="${title}" 
               loading="lazy"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
          />
          <div class="gallery-img-placeholder" style="display:none">🖼️</div>`
       : `<div class="gallery-img-placeholder">🖼️</div>`;
 
+    const destText = currentLang === 'en' ? '✦ featured' : '✦ destacada';
     const destacada = obra.destacada
-      ? '<span class="badge-destacada">✦ destacada</span>'
+      ? `<span class="badge-destacada">${destText}</span>`
       : '';
 
     div.innerHTML = `
       ${imgOrPlaceholder}
       ${destacada}
       <div class="gallery-overlay">
-        <span class="gallery-overlay-title">${obra.titulo || ''}</span>
+        <span class="gallery-overlay-title">${title || ''}</span>
       </div>
     `;
 
@@ -265,44 +289,71 @@ function renderObraItems(galeria, filtro, grid) {
   grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }
 
-function renderComisiones(comisiones) {
+function renderComisiones(comisiones, artist) {
+  const dict = globalData.ui_text[currentLang] || globalData.ui_text['es'];
   const statusBadge = document.getElementById('comm-status-badge');
   const statusText = document.getElementById('comm-status-text');
   statusBadge.className = 'commission-status-badge ' + (comisiones.abiertas ? 'open' : 'closed');
-  statusText.textContent = comisiones.abiertas ? 'abiertas' : 'cerradas';
+  const openText = currentLang === 'en' ? 'open' : 'abiertas';
+  const closedText = currentLang === 'en' ? 'closed' : 'cerradas';
+  statusText.textContent = comisiones.abiertas ? openText : closedText;
   statusBadge.querySelector('.badge-dot').style.background = 'currentColor';
 
   const meta = document.getElementById('comisiones-meta');
+  const waitTime = (currentLang === 'en' && comisiones.tiempo_espera_en) ? comisiones.tiempo_espera_en : comisiones.tiempo_espera;
+  
   meta.innerHTML = `
     <div class="meta-chip">
       <div>
-        <div class="meta-chip-label">tiempo de espera</div>
-        <div class="meta-chip-value">⏱ ${comisiones.tiempo_espera}</div>
+        <div class="meta-chip-label">${dict.tiempo_espera}</div>
+        <div class="meta-chip-value">⏱ ${waitTime}</div>
       </div>
     </div>
     <div class="meta-chip">
       <div>
-        <div class="meta-chip-label">inteligencia artificial</div>
+        <div class="meta-chip-label">${dict.ia}</div>
         <div class="meta-chip-value ${comisiones.acepta_ia ? '' : 'negative'}">
-          ${comisiones.acepta_ia ? '✓ aceptada' : '✕ no banco'}
+          ${comisiones.acepta_ia ? dict.ia_aceptada : dict.ia_no_banco}
         </div>
       </div>
     </div>
     ${comisiones.lgbtq_friendly ? `
     <div class="meta-chip">
       <div>
-        <div class="meta-chip-label">ambiente</div>
+        <div class="meta-chip-label">${dict.ambiente}</div>
         <div class="meta-chip-value">🌈 LGBTQ+ friendly</div>
       </div>
     </div>` : ''}
   `;
 
   const nota = document.getElementById('comisiones-nota');
-  if (comisiones.nota) {
-    nota.textContent = comisiones.nota;
+  const notaText = (currentLang === 'en' && comisiones.nota_en) ? comisiones.nota_en : comisiones.nota;
+  if (notaText) {
+    nota.textContent = notaText;
+    nota.style.display = 'block';
   } else {
     nota.style.display = 'none';
   }
+
+  const chipsSi = document.getElementById('chips-si');
+  chipsSi.innerHTML = '';
+  const cosasSi = (currentLang === 'en' && artist?.cosas_que_dibujo_en) ? artist.cosas_que_dibujo_en : (artist?.cosas_que_dibujo || []);
+  cosasSi.forEach(cosa => {
+    const span = document.createElement('span');
+    span.className = 'chip chip-si';
+    span.textContent = cosa;
+    chipsSi.appendChild(span);
+  });
+
+  const chipsNo = document.getElementById('chips-no');
+  chipsNo.innerHTML = '';
+  const cosasNo = (currentLang === 'en' && artist?.cosas_que_no_dibujo_en) ? artist.cosas_que_no_dibujo_en : (artist?.cosas_que_no_dibujo || []);
+  cosasNo.forEach(cosa => {
+    const span = document.createElement('span');
+    span.className = 'chip chip-no';
+    span.textContent = cosa;
+    chipsNo.appendChild(span);
+  });
 
   const grid = document.getElementById('comisiones-grid');
   grid.innerHTML = '';
@@ -311,8 +362,11 @@ function renderComisiones(comisiones) {
     card.className = 'comision-card reveal';
     card.style.transitionDelay = `${i * 0.1}s`;
 
+    const name = (currentLang === 'en' && tipo.nombre_en) ? tipo.nombre_en : tipo.nombre;
+    const desc = (currentLang === 'en' && tipo.descripcion_en) ? tipo.descripcion_en : tipo.descripcion;
+
     const imgHtml = tipo.imagen_ejemplo
-      ? `<img src="${tipo.imagen_ejemplo}" alt="${tipo.nombre}"
+      ? `<img src="${tipo.imagen_ejemplo}" alt="${name}"
               loading="lazy"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
          />
@@ -322,10 +376,10 @@ function renderComisiones(comisiones) {
     card.innerHTML = `
       <div class="comision-img-wrap">${imgHtml}</div>
       <div class="comision-body">
-        <div class="comision-nombre">${tipo.nombre}</div>
-        <div class="comision-desc">${tipo.descripcion}</div>
+        <div class="comision-nombre">${name}</div>
+        <div class="comision-desc">${desc}</div>
         <div class="comision-precio">
-          <span class="precio-desde">desde</span>
+          <span class="precio-desde">${dict.desde}</span>
           <span class="precio-valor">${tipo.moneda} ${tipo.precio_desde}</span>
         </div>
       </div>
@@ -382,8 +436,10 @@ function renderContacto(redes, artist) {
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('site-footer').querySelector('#year').textContent =
-    new Date().getFullYear();
+  const siteFooter = document.getElementById('site-footer');
+  if (siteFooter && artist) {
+    siteFooter.innerHTML = `© <span id="year">${new Date().getFullYear()}</span> ${artist.name}`;
+  }
 }
 
 async function init() {
@@ -393,6 +449,7 @@ async function init() {
     const res = await fetch('portfolio_data.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
+    globalData = data;
   } catch (err) {
     console.warn('No se pudo cargar portfolio_data.json:', err.message);
     document.getElementById('artist-bio').textContent =
@@ -401,10 +458,10 @@ async function init() {
     return;
   }
 
+  applyTranslations(data);
   renderHero(data);
-  renderSobreMi(data.artist);
   renderGaleria(data.galeria || []);
-  renderComisiones(data.comisiones);
+  renderComisiones(data.comisiones, data.artist);
   renderContacto(data.redes, data.artist);
 
   observeReveal();
