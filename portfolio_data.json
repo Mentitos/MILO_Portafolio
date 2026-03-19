@@ -45,9 +45,9 @@
       {
         "id": "retrato",
         "nombre": "Retrato",
-        "nombre_en": "Retrato",
+        "nombre_en": "pruebita",
         "descripcion": "Busto o medio cuerpo con fondo simple o sin fondo",
-        "descripcion_en": "Busto o medio cuerpo con fondo simple o sin fondo",
+        "descripcion_en": "tengo miedo",
         "precio_desde": 25.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/OIP-2409106471.jpg"
