@@ -29,6 +29,7 @@ if (langBtn) {
       renderGaleria(globalData.galeria || []);
       renderComisiones(globalData.comisiones, globalData.artist);
       renderContacto(globalData.redes, globalData.artist);
+      observeReveal();
     }
   });
 }
