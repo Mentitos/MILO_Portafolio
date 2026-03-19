@@ -35,7 +35,7 @@
   },
   "comisiones": {
     "abiertas": true,
-    "tiempo_espera": "2 meses",
+    "tiempo_espera": "2 semanas - 2 meses",
     "tiempo_espera_en": "2 meses",
     "acepta_ia": false,
     "lgbtq_friendly": true,
@@ -104,66 +104,6 @@
       "tipo": "Retrato",
       "tipo_en": "Retrato",
       "destacada": true
-    },
-    {
-      "id": "1773543913434",
-      "titulo": "Capsaicin Cookie",
-      "titulo_en": "Capsaicin Cookie",
-      "descripcion": "picante owo",
-      "descripcion_en": "picante owo",
-      "enlaces": {
-        "instagram": "#",
-        "twitter_x": "#"
-      },
-      "imagen": "assets/obras/1773543913434_1773543986115.jpg",
-      "tipo": "Cuerpo Completo",
-      "tipo_en": "Cuerpo Completo",
-      "destacada": false
-    },
-    {
-      "id": "1773542735858",
-      "titulo": "Sadaharu y Gintoki",
-      "titulo_en": "Sadaharu y Gintoki",
-      "descripcion": "mas lindos juntos",
-      "descripcion_en": "mas lindos juntos",
-      "enlaces": {
-        "instagram": "#",
-        "twitter_x": "#"
-      },
-      "imagen": "assets/obras/1773542735858_1773542769998.jpg",
-      "tipo": "Con Fondo",
-      "tipo_en": "Con Fondo",
-      "destacada": false
-    },
-    {
-      "id": "1",
-      "titulo": "Kagura png",
-      "titulo_en": "Kagura png",
-      "descripcion": "Kagura cuerpo completo ponele",
-      "descripcion_en": "Kagura cuerpo completo ponele",
-      "enlaces": {
-        "instagram": "#",
-        "twitter_x": "#"
-      },
-      "imagen": "assets/obras/245-2453696_gintama-png-4253462901.png",
-      "tipo": "Cuerpo Completo",
-      "tipo_en": "Cuerpo Completo",
-      "destacada": false
-    },
-    {
-      "id": "2",
-      "titulo": "Gintoki Jpg",
-      "titulo_en": "Gintoki Jpg",
-      "descripcion": "Dibujo rápido y casual de Gintoki.",
-      "descripcion_en": "Dibujo rápido y casual de Gintoki.",
-      "enlaces": {
-        "instagram": "https://www.instagram.com/",
-        "twitter_x": "#"
-      },
-      "imagen": "assets/obras/OIP-2409106471.jpg",
-      "tipo": "Retrato",
-      "tipo_en": "Retrato",
-      "destacada": false
     }
   ],
   "ui_text": {
