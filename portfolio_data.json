@@ -100,7 +100,7 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1774964340701_1774964372553.png",
-      "tipo": "",
+      "tipo": "Retrato de medio cuerpo",
       "tipo_en": "",
       "destacada": false
     },
@@ -108,14 +108,14 @@
       "id": "1774964200171",
       "titulo": "hola",
       "titulo_en": "",
-      "descripcion": "",
+      "descripcion": "dibujo para un dtyis",
       "descripcion_en": "",
       "enlaces": {
-        "instagram": "#",
+        "instagram": "https://www.instagram.com/p/CCorZdDJ11c/?igsh=MXB5cG1nc2xkZTZmNg==",
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1774964200171_1774964295092.png",
-      "tipo": "Cuerpo Completo",
+      "tipo": "Plano Americano",
       "tipo_en": "",
       "destacada": false
     },
@@ -130,7 +130,7 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773544703645_1773544708810.jpeg",
-      "tipo": "Cuerpo Completo",
+      "tipo": "Retrato de medio cuerpo",
       "tipo_en": "Cuerpo Completo",
       "destacada": false
     },
@@ -145,9 +145,9 @@
         "twitter_x": "#"
       },
       "imagen": "assets/obras/1773544651225_1773544664464.jpeg",
-      "tipo": "Retrato",
+      "tipo": "Retrato de medio cuerpo",
       "tipo_en": "Retrato",
-      "destacada": true
+      "destacada": false
     }
   ],
   "ui_text": {
