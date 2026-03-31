@@ -22,7 +22,8 @@
     "cosas_que_no_dibujo": [
       "mecha",
       "nsfw",
-      "gore"
+      "gore",
+      "fondos complejos"
     ],
     "cosas_que_no_dibujo_en": [
       "mecha"
@@ -49,7 +50,7 @@
         "id": "retrato",
         "nombre": "Retrato",
         "nombre_en": "pruebita",
-        "descripcion": "Busto o medio cuerpo con fondo simple o sin fondo",
+        "descripcion": "",
         "descripcion_en": "tengo miedo",
         "precio_desde": 25.0,
         "moneda": "USD",
@@ -57,7 +58,7 @@
       },
       {
         "id": "cuerpo_completo",
-        "nombre": "Cuerpo Completo",
+        "nombre": "Retrato de medio cuerpo",
         "nombre_en": "Cuerpo Completo",
         "descripcion": "Personaje completo con pose dinámica y fondo básico",
         "descripcion_en": "Personaje completo con pose dinámica y fondo básico",
@@ -66,14 +67,24 @@
         "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
       },
       {
-        "id": "tipo_1773544282998",
-        "nombre": "Con Fondo",
-        "nombre_en": "Con Fondo",
-        "descripcion": "Ahora tiene fondo",
-        "descripcion_en": "Ahora tiene fondo",
-        "precio_desde": 70.0,
+        "id": "tipo_1774964847371",
+        "nombre": "Plano Americano",
+        "nombre_en": "New type",
+        "descripcion": "Personaje retratado hasta las rodillas",
+        "descripcion_en": "",
+        "precio_desde": 0.0,
         "moneda": "USD",
-        "imagen_ejemplo": "assets/comisiones/tipo_1773544282998_1773544305806.jpg"
+        "imagen_ejemplo": "assets/comisiones/tipo_1774964847371_1774964973712.png"
+      },
+      {
+        "id": "tipo_1774964980257",
+        "nombre": "Plano de cuerpo completo",
+        "nombre_en": "New type",
+        "descripcion": "",
+        "descripcion_en": "",
+        "precio_desde": 0.0,
+        "moneda": "USD",
+        "imagen_ejemplo": ""
       }
     ]
   },
