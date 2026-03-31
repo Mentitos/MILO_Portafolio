@@ -79,6 +79,36 @@
   },
   "galeria": [
     {
+      "id": "1774964340701",
+      "titulo": "chau",
+      "titulo_en": "",
+      "descripcion": "",
+      "descripcion_en": "",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1774964340701_1774964372553.png",
+      "tipo": "",
+      "tipo_en": "",
+      "destacada": false
+    },
+    {
+      "id": "1774964200171",
+      "titulo": "hola",
+      "titulo_en": "",
+      "descripcion": "",
+      "descripcion_en": "",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1774964200171_1774964295092.png",
+      "tipo": "Cuerpo Completo",
+      "tipo_en": "",
+      "destacada": false
+    },
+    {
       "id": "1773544703645",
       "titulo": "When haces tus publicaciones",
       "titulo_en": "When haces tus publicaciones",
