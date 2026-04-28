@@ -202,10 +202,12 @@ function renderHero(data) {
   if (artist.avatar) avatarImg.src = artist.avatar;
 
   const badge = document.getElementById('commission-badge');
-  badge.className = 'commission-badge reveal ' + (comisiones.abiertas ? 'open' : 'closed');
-  badge.querySelector('.badge-text').textContent = comisiones.abiertas
-    ? dict.comisiones_abiertas
-    : dict.comisiones_cerradas;
+  if (badge) {
+    badge.className = 'commission-badge reveal ' + (comisiones.abiertas ? 'open' : 'closed');
+    badge.querySelector('.badge-text').textContent = comisiones.abiertas
+      ? dict.comisiones_abiertas
+      : dict.comisiones_cerradas;
+  }
 }
 
 
@@ -293,6 +295,7 @@ function renderObraItems(galeria, filtro, grid) {
 function renderComisiones(comisiones, artist) {
   const dict = globalData.ui_text[currentLang] || globalData.ui_text['es'];
   const statusBadge = document.getElementById('comm-status-badge');
+  if (!statusBadge) return;
   const statusText = document.getElementById('comm-status-text');
   statusBadge.className = 'commission-status-badge ' + (comisiones.abiertas ? 'open' : 'closed');
   const openText = currentLang === 'en' ? 'open' : 'abiertas';

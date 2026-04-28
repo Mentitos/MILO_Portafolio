@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MILO vera — Portfolio / CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Milo Vera</a>
+    <div class="nav-links">
+      <a href="#galeria" data-i18n="nav_galeria">galería</a>
+      <a href="#contacto" data-i18n="nav_contacto">contacto</a>
+    </div>
+    <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma">
+      ES
+    </button>
+    <button id="theme-toggle" aria-label="Cambiar tema">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+        fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+        fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#galeria" class="mobile-link" data-i18n="nav_galeria">galería</a>
+    <a href="#contacto" class="mobile-link" data-i18n="nav_contacto">contacto</a>
+  </div>
+
+  <main id="main-content">
+
+    <section id="hero" class="section hero-acordeon-section"
+      style="padding-top: calc(var(--nav-height) + 20px); padding-bottom: 20px;">
+      <div class="container">
+
+        <div class="gallery-collapsible" id="hero-collapsible">
+          <div class="gallery-collapsible-header" id="hero-toggle" tabindex="0" role="button" aria-expanded="false"
+            aria-controls="hero-collapsible-inner">
+            <h2 class="section-title" id="acordeon-artist-name"
+              style="margin-bottom:0; font-size: clamp(20px, 3vw, 24px);">Milo Vera</h2>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 14px; color: var(--on-muted); font-weight: 500;" data-i18n="ver_presentacion">Ver presentación</span>
+              <span class="chevron">▼</span>
+            </div>
+          </div>
+
+          <div class="gallery-collapsible-content">
+            <div class="gallery-collapsible-inner" id="hero-collapsible-inner" style="padding-bottom: 20px;">
+              <div class="hero-inner" style="padding-top: 20px;">
+                <div class="hero-text">
+                  <span class="hero-label reveal">✦ portfolio &amp; arte digital</span>
+                  <h1 class="hero-name reveal" id="artist-name">MILO VERA</h1>
+                  <p class="hero-tagline reveal italic" id="artist-tagline">arte digital · figura humana
+                  </p>
+                  <p class="hero-bio reveal" id="artist-bio">Cargando...</p>
+                </div>
+                <div class="hero-avatar-wrap reveal">
+                  <div class="avatar-ring"></div>
+                  <img src="assets/images/avatar.png" alt="avatar" class="hero-avatar" id="hero-avatar"
+                    onerror="this.style.display='none';document.querySelector('.avatar-placeholder').style.display='flex'" />
+                  <div class="avatar-placeholder">
+                    <span>🎨</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="galeria_titulo">galería</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-btn active" data-filter="todas">todas</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <div class="gallery-empty">✨ Las obras aparecerán acá</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contacto-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="contacto_titulo">contacto</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="contacto-sub" data-i18n="contacto_sub">¿Querés charlar de arte o proponerme un proyecto? ¡Escribime!</p>
+        <div class="social-grid" id="social-grid"></div>
+        <footer class="site-footer" id="site-footer">
+          © <span id="year"></span> MILO vera
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <div class="lightbox-content" id="lightbox-content">
+      <div class="lightbox-img-wrap" id="lightbox-img-wrap">
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">❮</button>
+        <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente">❯</button>
+      </div>
+      <div class="lightbox-info" id="lightbox-info">
+        <h3 class="lightbox-title" id="lightbox-title"></h3>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+        <div class="lightbox-social" id="lightbox-social"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
