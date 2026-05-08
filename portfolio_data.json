@@ -90,6 +90,21 @@
   },
   "galeria": [
     {
+      "id": "1778256941232",
+      "titulo": "hm",
+      "titulo_en": "",
+      "descripcion": "16/04/26\nFanart de Nene Kusanagi de Project Sekai",
+      "descripcion_en": "",
+      "enlaces": {
+        "instagram": "#",
+        "twitter_x": "#"
+      },
+      "imagen": "assets/obras/1778256941232_1778257144998.png",
+      "tipo": "Retrato",
+      "tipo_en": "",
+      "destacada": false
+    },
+    {
       "id": "1774964340701",
       "titulo": "chau",
       "titulo_en": "",
@@ -108,7 +123,7 @@
       "id": "1774964200171",
       "titulo": "hola",
       "titulo_en": "",
-      "descripcion": "Dibujo para un dtyis\n14/07/2020",
+      "descripcion": "14/07/2020\nDibujo para un dtyis",
       "descripcion_en": "",
       "enlaces": {
         "instagram": "https://www.instagram.com/p/CCorZdDJ11c/",
