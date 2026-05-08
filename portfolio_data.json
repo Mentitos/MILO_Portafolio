@@ -52,7 +52,7 @@
         "nombre_en": "pruebita",
         "descripcion": "Ilustración del personaje hasta parte del torso",
         "descripcion_en": "tengo miedo",
-        "precio_desde": 25.0,
+        "precio_desde": 22.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/comisiones/retrato_1778257436199.png"
       },
@@ -62,7 +62,7 @@
         "nombre_en": "Cuerpo Completo",
         "descripcion": "Ilustración de un personaje hasta la cintura",
         "descripcion_en": "Personaje completo con pose dinámica y fondo básico",
-        "precio_desde": 50.0,
+        "precio_desde": 30.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/obras/245-2453696_gintama-png-4253462901.png"
       },
@@ -72,7 +72,7 @@
         "nombre_en": "New type",
         "descripcion": "Ilustración del cuerpo completo de un personaje",
         "descripcion_en": "",
-        "precio_desde": 0.0,
+        "precio_desde": 36.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/comisiones/tipo_1774964847371_1774964973712.png"
       }
