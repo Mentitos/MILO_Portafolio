@@ -50,17 +50,17 @@
         "id": "retrato",
         "nombre": "Retrato",
         "nombre_en": "pruebita",
-        "descripcion": "",
+        "descripcion": "Ilustración del personaje hasta parte del torso",
         "descripcion_en": "tengo miedo",
         "precio_desde": 25.0,
         "moneda": "USD",
-        "imagen_ejemplo": "assets/obras/OIP-2409106471.jpg"
+        "imagen_ejemplo": "assets/comisiones/retrato_1778257436199.png"
       },
       {
         "id": "cuerpo_completo",
         "nombre": "Retrato de medio cuerpo",
         "nombre_en": "Cuerpo Completo",
-        "descripcion": "Personaje completo con pose dinámica y fondo básico",
+        "descripcion": "Ilustración de un personaje hasta la cintura",
         "descripcion_en": "Personaje completo con pose dinámica y fondo básico",
         "precio_desde": 50.0,
         "moneda": "USD",
@@ -68,23 +68,13 @@
       },
       {
         "id": "tipo_1774964847371",
-        "nombre": "Plano Americano",
+        "nombre": "Plano de cuerpo completo",
         "nombre_en": "New type",
-        "descripcion": "Personaje retratado hasta las rodillas",
+        "descripcion": "Ilustración del cuerpo completo de un personaje",
         "descripcion_en": "",
         "precio_desde": 0.0,
         "moneda": "USD",
         "imagen_ejemplo": "assets/comisiones/tipo_1774964847371_1774964973712.png"
-      },
-      {
-        "id": "tipo_1774964980257",
-        "nombre": "Plano de cuerpo completo",
-        "nombre_en": "New type",
-        "descripcion": "",
-        "descripcion_en": "",
-        "precio_desde": 0.0,
-        "moneda": "USD",
-        "imagen_ejemplo": ""
       }
     ]
   },
